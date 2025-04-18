@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/images/logo3.jpg" alt="Fashion Fable Logo" />
+           
+            
+            
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Collection</a></li>
+            <li><a href="#">Contact Us</a></li>
+            
+      
+            
+            
+        </ul>
+    
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button class="search-btn">Search</button>
+            <a href="#" class="cart-btn"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+    
+    </nav>
+
+
+
+        <section id="prodetails" class="section-p1">
+            <div class="single-pro-image">
+                <div class="try-div" id="try_it">
+                    <img src="/diwali_images/diwali1.jpg" width="100%" id="MainImg" alt="">
+                </div>
+        
+                <div class="small-img-group">
+                    <div class="small-img-col" id="first_image" onclick="changeImage(0)">
+                        <img src="/diwali_images/diwali1.jpg" width="100%" alt="">
+                    </div>
+                    <div class="small-img-col" id="second-image" onclick="changeImage(1)">
+                        <img src="/diwali_images/diwali2.jpg" width="100%" alt="">
+                    </div>
+                    <div class="small-img-col" id="third_image" onclick="changeImage(2)">
+                        <img src="/diwali_images/diwali3.jpg" width="100%" alt="">
+                    </div>
+                    <div class="small-img-col" id="fourth_image" onclick="changeImage(3)">
+                        <img src="/diwali_images/diwali4.jpg" width="100%" alt="">
+                    </div>
+                </div>
+        
+                <!-- Carousel Control Buttons -->
+                <button id="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button id="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        <div class="single-pro-details">
+            <h6>Home/T-Shirt</h6>
+            <h4>Men's Fashion T-shirt</h4>
+            <h2>Rs.1200</h2>
+            <select >
+                <option >Select Size</option>
+                <option >Small</option>
+                <option >Medium</option>
+                <option >Large</option>
+                <option >XL</option>
+                <option >XXL</option>
+            </select>
+            <input type="number" value="1">
+            <button>Add To Cart</button>
+            <h4>Product Detail</h4>
+            <span>Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate, odit placeat dolorem quisquam, temporibus magni at excepturi optio nulla delectus voluptate minus repudiandae doloremque ipsa cum veniam vel alias. ipsum dolor sit, amet consectetur adipisicing elit. Temporibus atque eligendi quibusdam similique corrupti odit fugit voluptatibus sunt sed earum iste distinctio voluptatum, voluptas magni ipsam itaque dicta repudiandae! Perferendis.</span>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-icons">
+                <img src="/images/fb.png" alt="Icon 1">
+                <img src="/images/ig.jpg" alt="Icon 2">
+                <img src="/images/tw.png" alt="Icon 3">
+                <!-- Add more icons as needed -->
+            </div>
+            <div class="footer-text">
+                &copy; 2024 Fashion Fable. All rights reserved.
+            </div>
+            <div class="footer-text">
+                Follow us on social media!
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script >
+        var MainImg = document.getElementById("MainImg");
+        var smallimg = document.getElementById("small-img")
+ 
+        smallimg[0].onclick =function(){
+            MainImg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick =function(){
+            MainImg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick =function(){
+            MainImg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick =function(){
+            MainImg.src = smallimg[3].src;
+        }
+
+    </script> -->
+    <script src="script3.js"></script>
+</body>
+</html>

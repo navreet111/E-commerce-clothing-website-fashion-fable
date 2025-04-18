@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input id="email" type="email" placeholder="email@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input id="password" type="password" placeholder="Enter your password" required>
+                </div>
+                <button class="btn" type="submit">Sign In</button>
+            </form>
+            <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+        <div class="image-container">
+            <img class="login-image" src="filip-rankovic-grobgaard-pPv98aFsz8s-unsplash.jpg" alt="Person logging in">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const response = await fetch("http://localhost:3004/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password })
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                // **Store the token in localStorage**
+                localStorage.setItem('token', result.token);
+                alert("Login successful!");
+                window.location.href = "/index.html"; // Redirect to home page
+            } else {
+                alert(result.message);
+            }
+        });
+    </script>
+</body>
+</html>

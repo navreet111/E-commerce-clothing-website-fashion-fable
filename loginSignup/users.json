@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Navreet Kaur",
+    "email": "singhravneet2244@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$cwdqu6qW.JYZ96SdxCoN5Of5Hn2eDAlHoxLMWzUpRJcJYQLiRYEB6"
+  },
+  {
+    "name": "Khushi ",
+    "email": "khushi@gmail.com",
+    "phone": "06589875646",
+    "password": "$2b$10$1K.T08x35ZOPFHFrmgn/GuPdjwwp3tiEJ/kr5RIwcNJ9ncx4qWD4W"
+  },
+  {
+    "name": "lovish",
+    "email": "lovish@gmail.com",
+    "phone": "8732846843",
+    "password": "$2b$10$12d.bJhs1g/n/DwWjYkYIeY.3EMWGIawoHr3iw6Eg4Iuaf4YWMdD2"
+  },
+  {
+    "name": "lovishs",
+    "email": "lovish1@gmail.com",
+    "phone": "8732146843",
+    "password": "1234"
+  },
+  {
+    "name": "khushi",
+    "email": "khushi1@gmail.com",
+    "phone": "8732146843",
+    "password": "1234"
+  },
+  {
+    "name": "Khushi Sachdeva",
+    "email": "khushi0463.be23@chitkara.edu.in",
+    "phone": "6280712978",
+    "password": "1234"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet@gmail.com",
+    "phone": "67859937",
+    "password": "1234"
+  },
+  {
+    "name": "Khushi Sachdeva",
+    "email": "khushi@chitkara.edu.in",
+    "phone": "6280712978",
+    "password": "1234"
+  },
+  {
+    "name": "khushi",
+    "email": "khushi14@gmail.com",
+    "phone": "6547837492",
+    "password": "12345"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet1.17@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$tPvD7XNVtZetkdX8T4oKG.0Oso6EnreeYf8IFS9Up9hP6F3Aynw8W"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet12345@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$t0RBhUIlH5aoC0eVr0GmNegjfDufXRLLCbG/okAxKKOojQHqSU5ty",
+    "role": "seller"
+  },
+  {
+    "name": "Admin",
+    "email": "admin@fashionhub.com",
+    "phone": "0000000000",
+    "password": "$2b$10$PCZNQNMNr.Ijjs0gdmWrTuSH/6LBgC24N2syj42dTwcxQ9uiiH5GW",
+    "role": "admin",
+    "createdAt": "2025-04-17T18:35:06.218Z"
+  },
+  {
+    "name": "Khushi ",
+    "email": "khushi1411@gmail.com",
+    "phone": "9832798749",
+    "password": "$2b$10$Wt4d95SEc/zqkQpuGGXsyuU3yTd9FAxw53AOjz3.601nt4C5OMt9y",
+    "role": "admin",
+    "createdAt": "2025-04-17T19:09:12.283Z"
+  },
+  {
+    "name": "Khushi Sachdeva ",
+    "email": "khushi12@gmail.com",
+    "phone": "6280712797",
+    "password": "$2b$10$V0ycm9WcKQC8w4eZTUJ1q.zPVwFxhVyfaEEjy/WPFT02FeEMZQaLG",
+    "role": "admin",
+    "createdAt": "2025-04-17T19:10:51.137Z"
+  },
+  {
+    "name": "Khushi Sachdeva ",
+    "email": "khushi111@gmail.com",
+    "phone": "6280712797",
+    "password": "$2b$10$zVYMeoSyrbLGqV/VYM4kUej2BnVJiVR1m07pJ.1tLjl8Nyyn4RCdW",
+    "role": "seller"
+  },
+  {
+    "name": "Ram",
+    "email": "ram111@gmail.com",
+    "phone": "45795213",
+    "password": "$2b$10$ZiowZDLLnZg916bWMlZJLerjg3/1LNZSr.hpJALWFu7bww.wwFtr.",
+    "role": "seller"
+  },
+  {
+    "name": "ramm ",
+    "email": "ramm@gmail.com",
+    "phone": "325354646",
+    "password": "$2b$10$1G6vOoW8UVCSKGQYgWCii.1RRSYtOvA3iTPZn4nPVhBtQo3FAxv6K",
+    "role": "buyer"
+  }
+]

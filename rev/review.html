@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <style>
+        body {
+            background-image:url(rev.jpg) ;
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        h1, h2 {
+            color: #2e8b57;
+        }
+
+        form {
+            background-color: #fff;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #2e8b57;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d6340;
+        }
+
+        #reviews {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Submit Your Review</h1>
+    <form id="review-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="reviews">
+        <h2>Reviews:</h2>
+        <ul id="reviews-list"></ul>
+    </div>
+
+    <script>
+        document.getElementById('review-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const review = document.getElementById('review').value;
+
+            const reviewData = { username, review };
+            console.log(reviewData);
+
+            try {
+                const response = await fetch('http://localhost:3003/reviews', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(reviewData),
+                });
+
+                if (response.ok) {
+                    alert('Your review has been submitted successfully!');
+                    document.getElementById('review-form').reset();
+                    loadReviews();
+                } else {
+                    const errorData = await response.json();
+                    alert(`Failed to submit your review: ${errorData.message}`);
+                }
+            } catch (error) {
+                console.error('Error submitting review:', error);
+                alert('An error occurred while submitting your review.');
+            }
+        });
+
+        async function loadReviews() {
+            try {
+                const response = await fetch('http://localhost:3003/reviews');
+                if (response.ok) {
+                    const reviews = await response.json();
+                    const reviewsList = document.getElementById('reviews-list');
+                    reviewsList.innerHTML = '';
+                    reviews.forEach(review => {
+                        const li = document.createElement('li');
+                        li.textContent = `${review.username}: ${review.review}`;
+                        reviewsList.appendChild(li);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading reviews:', error);
+            }
+        }
+
+        loadReviews();
+    </script>
+</body>
+</html>
