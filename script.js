@@ -137,6 +137,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update the countdown every second
     const countdownInterval = setInterval(updateCountdown, 1000);
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const userRole = localStorage.getItem('role');
+    const cartBtn = document.getElementById('cartBtn');
+
+    if (cartBtn) {
+        if (userRole === 'buyer') {
+            cartBtn.style.display = 'inline-block'; // or flex
+        } else {
+            cartBtn.style.display = 'none';
+        }
+    }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const username = "navreetkaur"; // Example username
     const cart = JSON.parse(localStorage.getItem("cart")) || [];

@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - Fashion Fable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #282828;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .dashboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 12px 24px;
+            font-size: 16px;
+            color: white;
+            background-color: #714c1e;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #7d572b;
+        }
+
+        .response-message {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #ff8c00;
+            width: 80%;
+            text-align: center;
+        }
+
+        .response-message p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #282828;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>Seller Dashboard - Fashion Fable</h2>
+    </div>
+
+    <div class="dashboard-container">
+        <p>Welcome to your Seller Portal! Manage your products and keep your collection updated.</p>
+        
+        <div class="button-container">
+            <button onclick="accessProducts()">Manage Products</button>
+        </div>
+
+        <div id="responseMessage" class="response-message" style="display:none;">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Fashion Fable. All rights reserved.
+    </div>
+
+    <script>
+        async function accessProducts() {
+            const token = localStorage.getItem('token');
+            const responseMessage = document.getElementById('responseMessage');
+            const message = responseMessage.querySelector('p');
+            
+            try {
+                const response = await fetch('http://localhost:3004/admin/products', {
+                    headers: { 'Authorization': 'Bearer ' + token }
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    responseMessage.style.backgroundColor = '#f8d7da';
+                    message.textContent = `Error: ${data.message}`;
+                    responseMessage.style.display = 'block';
+                } else {
+                    responseMessage.style.backgroundColor = '#d4edda';
+                    message.textContent = `Success: ${data.message}`;
+                    responseMessage.style.display = 'block';
+                }
+            } catch (error) {
+                responseMessage.style.backgroundColor = '#f8d7da';
+                message.textContent = `Error: ${error.message}`;
+                responseMessage.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html> 
+

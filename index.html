@@ -24,22 +24,23 @@
         <img src="logo3.jpg" alt="Fashion Fable Logo" />
     </div>
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/final website fashion 2 (2)/final website fashion 2/index.html">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="Fee Project\collection.html">Collection</a></li>
-        <li><a href="contactUs/contact.html">Contact Us</a></li>
-        <li><a href="rev/review.html">Review</a></li>
+        <li><a href="/final website fashion 2 (2)/final website fashion 2/Fee Project/collection.html">Collection</a></li>
+        <li><a href="/final website fashion 2 (2)/final website fashion 2/contactUs/contact.html">Contact Us</a></li>
+        <li><a href="/final website fashion 2 (2)/final website fashion 2/rev/review.html">Review</a></li>
     </ul>
 
     <div class="search-container">
         <input type="text" placeholder="Search...">
         <!-- <button class="search-btn">Search</button> -->
-        <button class="search-btn" onclick="openCollectionPage()">Search</button>
+        <button class="search-btn" onclick="performSearch()">Search</button>
     </div>
 
-    <a href="cart/cart.html" class="cart-btn" style="color: white;">
+    <a href="/final website fashion 2 (2)/final website fashion 2/cart/cart.html" class="cart-btn" id="cartBtn" style="color: white; display: none;" >
         <i class="fa fa-shopping-cart"></i> 
       </a>
+      
       <div class="auth-buttons">
         <button class="btn logout-btn" onclick="logout()">Logout</button>
         </div>
@@ -57,8 +58,8 @@
         <div class="content-right">
             <div class="auth-buttons">
                 <div class="login-signup">
-                    <a href="/loginSignup/login.html" class="btn login-btn">Login</a>
-                    <a href="/loginSignup/signup.html" class="btn signup-btn">Sign Up</a>
+                    <a href="/final website fashion 2 (2)/final website fashion 2/loginSignup/login.html" class="btn login-btn">Login</a>
+                    <a href="/final website fashion 2 (2)/final website fashion 2/loginSignup/signup.html" class="btn signup-btn">Sign Up</a>
                 </div>
                 <br>
                 <a href="google-auth.html" class="btn google-btn">
@@ -100,7 +101,7 @@
                 
                 </div>
             <p>Exclusive discounts up to 50% on our latest collection! Hurry, offer ends soon.</p>
-            <a href="./loginSignup/login.html" class="btn sale-btn">Shop Now</a>
+            <a href="/final website fashion 2 (2)/final website fashion 2/loginSignup/login.html" class="btn sale-btn">Shop Now</a>
         </div>
     </section>
     <section class="new-section1">
@@ -115,31 +116,31 @@
             <img src="outfit1.jpg" alt="Outfit 1">
             <!-- <a href="#" class="shop-now-btn">Shop Now</a> -->
             <h1>Lehangas</h1>
-            <button onclick="checkAndAddToCart('Lehangas', 1320, '../outfit1.jpg' , 'Black')">Add to Cart</button>
+            <button onclick="checkAndAddToCart('Lehangas', 1320, '../outfit1.jpg' , 'Black')" class="shop-now-btn">Add to Cart</button>
         </div>
         <div class="collection-item">
             <img src="outfit5.jpg" alt="Outfit 2">
             <!-- <a href="#" class="shop-now-btn">Shop Now</a> -->
             <h1>Short Kurta Set</h1>
-            <button onclick="checkAndAddToCart('Short Kurta Set', 1320, '../outfit5.jpg', 'Black')">Add to Cart</button>
+            <button onclick="checkAndAddToCart('Short Kurta Set', 1320, '../outfit5.jpg', 'Black')" class="shop-now-btn">Add to Cart</button>
         </div>
         <div class="collection-item">
             <img src="outfit3.jpg" alt="Outfit 3">
             <!-- <a href="#" class="shop-now-btn">Shop Now</a> -->
             <h1>Frock Suit</h1>
-            <button onclick="checkAndAddToCart('Frock Suit', 1320, '../outfit3.jpg', 'Black')">Add to Cart</button>
+            <button onclick="checkAndAddToCart('Frock Suit', 1320, '../outfit3.jpg', 'Black')" class="shop-now-btn">Add to Cart</button>
         </div>
         <div class="collection-item">
             <img src="outfit6.jpg" alt="Outfit 4">
             <!-- <a href="#" class="shop-now-btn">Shop Now</a> -->
             <h1>Long Kurta Set</h1>
-            <button onclick="checkAndAddToCart('Long kurta set', 1320, '../outfit6.jpg', 'Black')">Add to Cart</button>
+            <button onclick="checkAndAddToCart('Long kurta set', 1320, '../outfit6.jpg', 'Black')" class="shop-now-btn">Add to Cart</button>
         </div>
         <div class="collection-item">
             <img src="outfit4.jpg" alt="Outfit 5">
             <!-- <a href="#" class="shop-now-btn">Shop Now</a> -->
             <h1>Sarees</h1>
-            <button onclick="checkAndAddToCart('Sarees', 1320, '../outfit4.jpg', 'Black')">Add to Cart</button>
+            <button onclick="checkAndAddToCart('Sarees', 1320, '../outfit4.jpg', 'Black')" class="shop-now-btn">Add to Cart</button>
          
             
         </div>
@@ -158,25 +159,25 @@
             <img src="casual4.jpg" alt="Outfit 1">
             <!-- <a href="#" class="shop-now-btn">Shop Now</a> -->
             <h1>Women's Formal</h1>
-            <button onclick="addToCart('Women Formal', 1320, '../casual4.jpg', 'Black')">Add to Cart</button>
+            <button onclick="addToCart('Women Formal', 1320, '../casual4.jpg', 'Black')" class="shop-now-btn">Add to Cart</button>
         </div>
         <div class="collection-item">
             <img src="casual3.jpg" alt="Outfit 2">
             <!-- <a href="#" class="shop-now-btn">Shop Now</a> -->
             <h1>Men's Casual</h1>
-            <button onclick="addToCart('Men Casual', 1320, '../casual3.jpg', 'Black')">Add to Cart</button>
+            <button onclick="addToCart('Men Casual', 1320, '../casual3.jpg', 'Black')" class="shop-now-btn">Add to Cart</button>
         </div>
         <div class="collection-item">
             <img src="casual5.jpg" alt="Outfit 3">
             <!-- <a href="#" class="shop-now-btn">Shop Now</a> -->
             <h1>Dresses</h1>
-            <button onclick="addToCart('Dresses', 1320, '../casual5.jpg', 'Black')">Add to Cart</button>
+            <button onclick="addToCart('Dresses', 1320, '../casual5.jpg', 'Black')" class="shop-now-btn">Add to Cart</button>
         </div>
         <div class="collection-item">
             <img src="casual6.jpg" alt="Outfit 4">
             <!-- <a href="#" class="shop-now-btn">Shop Now</a> -->
             <h1>Men's Formal</h1>
-            <button onclick="addToCart('Men Formal', 1320, '../casual6.jpg', 'Black')">Add to Cart</button>
+            <button onclick="addToCart('Men Formal', 1320, '../casual6.jpg', 'Black')" class="shop-now-btn">Add to Cart</button>
         </div>
         
     </div>
@@ -253,7 +254,7 @@
     <script>
              function performSearch() {
                 // Redirect the user to the collection page
-                window.location.href = 'Fee Project/collection.html';
+                window.location.href = "/final website fashion 2 (2)/final website fashion 2/Fee Project/collection.html";
             }
 
             function logout() {
@@ -261,11 +262,11 @@
                 localStorage.removeItem('token');
 
                 // Redirect the user to the login page
-                window.location.href = '/loginSignup/login.html';
+                window.location.href ="/final website fashion 2 (2)/final website fashion 2/loginSignup/login.html" ;
             }
 
             function checkAndAddToCart(name, price, image, color) {
-                const userRole = localStorage.getItem('userRole');
+                const userRole = localStorage.getItem('role');
 
                 if (userRole === 'seller') {
                     alert('Sellers are not allowed to add items to the cart.');
@@ -279,7 +280,7 @@
     const token = localStorage.getItem('token');
     if (!token) {
         alert('Please log in to add items to the cart.');
-        window.location.href = '/loginSignup/login.html';
+        window.location.href = '/final website fashion 2 (2)/final website fashion 2/loginSignup/login.html';
         return;
     }
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -297,11 +298,11 @@
     }
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    fetch("http://localhost:3009/cart", {
+    fetch("http://localhost:3004/cart", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}` // Include the token in the Authorization header
+            "Authorization": `Bearer ${token}` 
         },
         body: JSON.stringify({
             name,
@@ -324,6 +325,7 @@
         alert(error.message);
         console.error("Failed to save to backend:", error);
     });
+    
 }
 
         </script>

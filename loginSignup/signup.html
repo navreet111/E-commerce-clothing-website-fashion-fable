@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
  <html lang="en">
  <head>
      <meta charset="UTF-8">
@@ -75,4 +75,84 @@
     
  </body>
  </html>
- 
+  -->
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup - Fashion Fable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Create account</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input id="name" type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input id="email" type="email" placeholder="email@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Phone no</label>
+                    <input id="phone" type="text" placeholder="Enter your phone no" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input id="password" type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-group">
+                   <label for="admin">Select Role</label>
+                   <select id="role" style="width: 300px;height: 30px;" required>
+                       <option value="">--Select--</option>
+                       <option value="seller">Seller</option>
+                       <option value="buyer">Buyer</option>
+                       <option value="admin">Admin</option>
+                   </select>
+               </div>
+               
+               
+                <button class="btn" type="submit">Create Account</button>
+            </form>
+            <p class="signup-link">Already have an account? <a href="login.html">Sign in</a></p>
+        </div>
+        <div class="image-container">
+            <img class="signup-image" src="prahant-photography-IPWUnZAoQpA-unsplash.jpg" alt="Person using a laptop">
+        </div>
+    </div>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const role = document.getElementById('role').value;
+
+            try {
+                const response = await fetch('http://localhost:3004/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, phone, password, role })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert(data.message || "Signup successful!");
+                    window.location.href = "/final website fashion 2 (2)/final website fashion 2/loginSignup/login.html";
+                } else {
+                    alert(data.message || "Signup failed!");
+                }
+            } catch (error) {
+                alert("Error connecting to server. Try again later.");
+            }
+        });
+    </script>
+</body>
+</html>

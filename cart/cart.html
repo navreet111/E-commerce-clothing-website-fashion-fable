@@ -14,7 +14,7 @@
       <img src="../logo3.jpg" alt="Fashion Fable Logo" />
     </div>
     <ul>
-      <li><a href="/index.html">Home</a></li>
+      <li><a href="/final website fashion 2 (2)/final website fashion 2/index.html">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="/Fee Project/collection.html">Collection</a></li>
       <li><a href="/contactUs/contact.html">Contact Us</a></li>
@@ -68,10 +68,10 @@
     const token = localStorage.getItem('token');
     if (!token) {
         alert("Please sign up or login to checkout.");
-        window.location.href = "/loginSignup/signup.html";
+        window.location.href = "/final website fashion 2 (2)/final website fashion 2/loginSignup/signup.html";
     } else {
         // Proceed to checkout or home page
-        window.location.href = "/index.html";
+        window.location.href = "/final website fashion 2 (2)/final website fashion 2/index.html";
     }
 }
 
@@ -118,7 +118,62 @@
       subtotalElement.textContent = `₹${subtotal}`;
       totalElement.textContent = `₹${subtotal}`; // Assuming no additional charges for this example
     });
-  </script>
+
+    async function addToCart(productName, price) {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        alert("Please login first!");
+        return;
+      }
+    
+      const response = await fetch('http://localhost:3004/cart', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          product: productName,
+          price: price,
+          quantity: 1
+        })
+      });
+    
+      const data = await response.json();
+      alert(data.message);
+    }
+   
+function addToCart(item) {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+        alert("You must be logged in to add to cart.");
+        return;
+    }
+
+    fetch('http://localhost:3004/cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(item)
+    })
+    .then(async response => {
+        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.message || "Something went wrong");
+        }
+        alert(data.message);
+    })
+    .catch(error => {
+        console.error("Error adding to cart:", error.message);
+        alert("Failed to add item: " + error.message);
+    });
+}
+
+
+    </script>
 
   <!-- Cart Functionality Script -->
   <script src="cart.js"></script>

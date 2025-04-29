@@ -110,5 +110,117 @@
     "phone": "325354646",
     "password": "$2b$10$1G6vOoW8UVCSKGQYgWCii.1RRSYtOvA3iTPZn4nPVhBtQo3FAxv6K",
     "role": "buyer"
+  },
+  {
+    "name": "Khushi",
+    "email": "khushi123@gmail.com",
+    "phone": "546546112",
+    "password": "$2b$10$fX2pGFCHbGxqNmU72yUqGeeCDSusLOGWMp/qKn1sZLB7xjmwsI2V6",
+    "role": "seller"
+  },
+  {
+    "name": "khushi",
+    "email": "khushi1234@gmail.com",
+    "phone": "06280712797",
+    "password": "$2b$10$E9N90Y8/7t0ZMDdVwgrZdOFW.uEi6mnYwNsNShV9oehtZTPW0QuIC",
+    "role": "buyer"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet15@gmail.com",
+    "phone": "1234",
+    "password": "$2b$10$Ng.mmCIAegPex/nqS0ZPH.3pvVPReRYnIbYcxkEibcJ6BJMXEfkoG",
+    "role": "seller"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet8@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$xCtugHIFWwuuQQmDxH1a.eNGEU8pr4UyhnOjwgFQktw894oHfPKDW",
+    "role": "seller"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet155@gmail.com",
+    "phone": "1234",
+    "password": "$2b$10$OFpXPMUuegctr7wvsr6vbegtT4lIW5ed4zbZvwyri5tzOlCxogPcS",
+    "role": "seller"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet66@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$jh1JOxO4tR5FGj7L2BAclOYBkgJKUsiA1AmGiIUSSyEiKoPFOCY.q",
+    "role": "admin"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet6@gmail.com",
+    "phone": "1234",
+    "password": "$2b$10$0MWzkykKO5uGo8f1.8eieuekCM4tzJbSN5zjC8Bb2nUTRWZ1yArgC",
+    "role": "buyer"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet23@gmail.com",
+    "phone": "1234",
+    "password": "$2b$10$KyxUL7dbI0Fs3gwoovg9p.vLH8Hwz0I/VVYDD5BxyDTUMd8anL.sq",
+    "role": "seller"
+  },
+  {
+    "name": "reet",
+    "email": "navreet1@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$VAtv.4DSjaLRBv1FLwHhKeZPcCskxITjZ185sdFMVQL7G2SdUkrB.",
+    "role": "seller"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet99@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$MKoviry8LNSI9Y9q6reu6eMBl8VR.tt0qrPROyV5rPUjd3BJn.J6a",
+    "role": "admin"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet115@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$7yyHDSkJCkGGkHJ8g4uhZezZLT2B1LAnVP5rsbW51X.LtCE0bditG",
+    "role": "buyer"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "singhravneet22244@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$BntMreHi5rs0iIBpj/4qJOElkZwX11QLvfinu7xigmwemsF4vVXsC",
+    "role": "buyer"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet117@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$uFIQJZ6jxWHVShkNEWmR1ugQJZl8uPJoF9Qtsn3Y3qIkJX3.EqCna",
+    "role": "admin"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet175@gmail.com",
+    "phone": "67789",
+    "password": "$2b$10$Cw01Btje3632/nj0AD83A.RZTN/HdtJ3BuAbrK0hx4dy6cKKxGQ/O",
+    "role": "seller"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet165@gmail.com",
+    "phone": "9463024878",
+    "password": "$2b$10$UI9NSNdc7uYcYSuEeXXTqe/dwAzAKylu2iAOXZz4re.WrnBTxMFri",
+    "role": "seller"
+  },
+  {
+    "name": "Navreet Kaur",
+    "email": "navreet123@gmail.com",
+    "phone": "1234",
+    "password": "$2b$10$8BSyH47fV9.anhv4.qagrOm.xxIpnU310fh//UsoRyIf8ZhQfrVBy",
+    "role": "admin"
   }
 ]

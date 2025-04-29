@@ -10,7 +10,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     console.log(contactData);
 
     try {
-        const response = await fetch('http://localhost:3003/data.json', {
+        const response = await fetch('http://localhost:3004/data.json', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(contactData),

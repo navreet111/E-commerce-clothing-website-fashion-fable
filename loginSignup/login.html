@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,23 +35,105 @@
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
 
-            const response = await fetch("http://localhost:3004/login", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, password })
-            });
+            try {
+                const response = await fetch("http://localhost:3004/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ email, password })
+                });
 
-            const result = await response.json();
+                const result = await response.json();
 
-            if (response.ok) {
-                // **Store the token in localStorage**
-                localStorage.setItem('token', result.token);
-                alert("Login successful!");
-                window.location.href = "/index.html"; // Redirect to home page
-            } else {
-                alert(result.message);
+                if (response.ok) {
+                    // Store the token in localStorage
+                    localStorage.setItem('token', result.token);
+                    alert("Login successful!");
+                    window.location.href = "/final website fashion 2 (2)/final website fashion 2/index.html"; // Redirect to home page
+                } else {
+                    alert(result.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert("An error occurred. Please try again.");
             }
         });
     </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Fashion Fable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input id="email" type="email" placeholder="email@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input id="password" type="password" placeholder="Enter your password" required>
+                </div>
+                <button class="btn" type="submit">Sign In</button>
+            </form>
+            <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+        <div class="image-container">
+            <img class="login-image" src="filip-rankovic-grobgaard-pPv98aFsz8s-unsplash.jpg" alt="Person logging in">
+        </div>
+    </div>
+
+
+    
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+    
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+    
+            if (!email || !password) {
+                alert("Please enter both email and password!");
+                return;
+            }
+    
+            const response = await fetch('http://localhost:3004/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+    
+            const data = await response.json();
+    
+            if (response.ok) {
+                // Save to localStorage
+                localStorage.setItem('token', data.token);
+                localStorage.setItem('role', data.role); // Ensure the key matches your usage in other parts
+                localStorage.setItem('name', data.name);
+    
+                // Role-based redirection
+                if (data.role === "buyer") {
+                    window.location.href = "/final website fashion 2 (2)/final website fashion 2/index.html";
+                } else if (data.role === "seller") {
+                    window.location.href = "seller.html";
+                } else if (data.role === "admin") {
+                    window.location.href = "admin.html";
+                }
+            } else {
+                alert(data.message || "Login failed. Please try again.");
+            }
+        });
+    </script>
+    
 </body>
 </html>

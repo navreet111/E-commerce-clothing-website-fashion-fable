@@ -278,5 +278,12 @@
     "image": "../casual6.jpg",
     "color": "Black",
     "quantity": 1
+  },
+  {
+    "name": "Frock Suit",
+    "price": 1320,
+    "image": "../outfit3.jpg",
+    "color": "Black",
+    "quantity": 1
   }
 ]
